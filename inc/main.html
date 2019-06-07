@@ -1,0 +1,33 @@
+<body>
+	<div class="container">
+		<div class="jumbotron">
+			<div class="center">
+				<h2>Music Downloader</h2>
+				<form onsubmit="return false">
+					<div class="form-group">
+						<input id="busca_input" type="text" class="form-control" name="busca" placeholder="Nome da música">
+						<div class="center" style="width: 500px;">
+							<div class="radio" style="text-align: left">
+								<label style="font-size: 16px; font-weight: bold">
+							    	<input type="radio" name="radio" id="radioSim" value="1" checked>
+							    	Retornar opções adicionais (bitrate, tamanho) 
+							  	</label>
+							</div>
+							<div class="radio" style="text-align: left">
+								<label style="font-size: 16px; font-weight: bold">
+							    	<input type="radio" name="radio" id="radioNao" value="0">
+							    	Não retornar opções adicionais 
+							  	</label>
+							</div>
+						</div>
+					</div>
+					<div id="erro_busca" style="display: none" class="alert alert-danger"><strong></strong></div>
+					<button type="submit" class="btn btn-lg btn-primary" onClick="getData(document.forms[0]);">Pesquisar</button>
+				</form>
+				<br />
+				<div id="loading_div" style="display: none"><br /><img alt="" src="lib/img/loading.gif" style="width: 40px"></div>
+				<div id="resultado_div"></div>
+			</div>
+		</div>
+	</div>
+</body>
